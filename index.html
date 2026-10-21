@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101321">
+  <meta name="description" content="محادثة ذكاء اصطناعي عربية — مساعدك للتفكير والكتابة والتعلّم، في تجربة بسيطة ومباشرة.">
+  <title>رِواق — محادثة ذكاء اصطناعي</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#الرئيسية" aria-label="رِواق، الصفحة الرئيسية">
+      <span class="brand-mark" aria-hidden="true">ر</span>
+      <span>رِواق<span class="brand-dot">.</span></span>
+    </a>
+    <nav aria-label="التنقل الرئيسي">
+      <a href="#المزايا">المزايا</a>
+      <a href="#كيف-يعمل">كيف يعمل</a>
+    </nav>
+    <a class="top-cta" href="#جرّب-الآن">جرّبه الآن <span aria-hidden="true">←</span></a>
+  </header>
+
+  <main id="الرئيسية">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> مساعدك الذكي، باللغة التي تحبها</div>
+        <h1 id="hero-title">اسأل. فكّر.<br><span>اكتشف أكثر.</span></h1>
+        <p class="hero-intro">مساحة محادثة تساعدك على ترتيب أفكارك، صياغة كلماتك، وفهم الأشياء من حولك. ابدأ بسؤال صغير، وخذ الحديث إلى حيث تريد.</p>
+        <a class="primary-cta" href="#جرّب-الآن">ابدأ محادثة <span aria-hidden="true">←</span></a>
+        <div class="hero-note"><span aria-hidden="true">✳</span> اكتب بالعربية أو بأي أسلوب يناسبك</div>
+      </div>
+
+      <section class="chat-card" id="جرّب-الآن" aria-label="تجربة محادثة تفاعلية">
+        <div class="chat-header">
+          <div class="chat-title-wrap">
+            <div class="bot-avatar" aria-hidden="true"><span>✳</span></div>
+            <div><strong>رِواق</strong><small><span class="status-dot"></span> جاهز للمحادثة</small></div>
+          </div>
+          <button class="icon-button" id="clear-chat" type="button" aria-label="بدء محادثة جديدة" title="محادثة جديدة">↻</button>
+        </div>
+        <div class="chat-body" id="chat-messages" aria-live="polite" aria-relevant="additions">
+          <div class="message assistant-message">
+            <div class="message-avatar" aria-hidden="true">✳</div>
+            <div class="bubble"><p>أهلًا! أنا رِواق. وش تحب نسوي اليوم؟ اسألني، أو اختر بداية من الاقتراحات.</p><time>الآن</time></div>
+          </div>
+          <div class="suggestions" id="suggestions" aria-label="اقتراحات للبدء">
+            <button type="button" data-prompt="ساعدني أرتب أفكاري لمشروع جديد">رتّب أفكاري</button>
+            <button type="button" data-prompt="اكتب لي رسالة لطيفة لصديق">اكتب رسالة</button>
+            <button type="button" data-prompt="اشرح لي فكرة صعبة بطريقة بسيطة">اشرح فكرة</button>
+          </div>
+        </div>
+        <form class="composer" id="chat-form">
+          <label class="sr-only" for="chat-input">اكتب رسالتك</label>
+          <textarea id="chat-input" rows="1" maxlength="600" placeholder="اكتب سؤالك هنا…" required></textarea>
+          <button class="send-button" type="submit" aria-label="إرسال الرسالة">↑</button>
+          <div class="composer-hint">رِواق نموذج تجريبي يعمل داخل هذه الصفحة</div>
+        </form>
+      </section>
+      <div class="orb orb-one" aria-hidden="true"></div>
+      <div class="orb orb-two" aria-hidden="true"></div>
+    </section>
+
+    <section class="features section-shell" id="المزايا" aria-labelledby="features-title">
+      <div class="section-heading">
+        <span class="section-kicker">محادثة على راحتك</span>
+        <h2 id="features-title">أفكارك تستحق مساحة.</h2>
+        <p>من أول خاطر إلى الخطوة التالية، رِواق هنا ليساعدك على الانطلاق.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-icon violet" aria-hidden="true">✎</span><h3>اكتب بطريقتك</h3><p>ابدأ مسودة، حسّن صياغة، أو ابحث عن العبارة المناسبة لما تريد قوله.</p></article>
+        <article class="feature-card"><span class="feature-icon mint" aria-hidden="true">⌁</span><h3>فكّك الأفكار</h3><p>حوّل السؤال الكبير إلى نقاط أو خطوات صغيرة يسهل البدء بها.</p></article>
+        <article class="feature-card"><span class="feature-icon peach" aria-hidden="true">✳</span><h3>تعلّم باستكشاف</h3><p>اطلب شرحًا مبسطًا، ثم تابع بأسئلة تناسب فضولك وإيقاعك.</p></article>
+      </div>
+    </section>
+
+    <section class="how section-shell" id="كيف-يعمل" aria-labelledby="how-title">
+      <div class="how-panel">
+        <div><span class="section-kicker">البداية بسيطة</span><h2 id="how-title">محادثة تبدأ منك.</h2></div>
+        <div class="steps">
+          <div class="step"><span>١</span><p>اكتب ما يشغل بالك، حتى لو لم تعرف كيف تصوغه.</p></div>
+          <div class="step"><span>٢</span><p>اقرأ الرد، واطلب توضيحًا أو فكرة أخرى.</p></div>
+          <div class="step"><span>٣</span><p>خذ ما يفيدك، واجعل الفكرة تنطلق بطريقتك.</p></div>
+        </div>
+      </div>
+      <p class="disclaimer">ملاحظة: المحادثة في هذه الصفحة تجربة واجهة محلية بردود توضيحية، وليست متصلة بخدمة ذكاء اصطناعي. تحقّق من المعلومات المهمة قبل الاعتماد عليها.</p>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#الرئيسية"><span class="brand-mark" aria-hidden="true">ر</span><span>رِواق<span class="brand-dot">.</span></span></a><p>مساحة صغيرة لأفكار كبيرة.</p><a href="#الرئيسية" class="back-top">إلى الأعلى ↑</a></footer>
+</body>
+</html>
